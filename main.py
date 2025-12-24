@@ -225,6 +225,7 @@ def sms_reply():
             msg_body = f"({i+1}/{len(chunks)}) {chunk}"
             resp.message(msg_body)
     else:
+        chunks = [reply_text]
         resp.message(reply_text)
 
     log_structured(
